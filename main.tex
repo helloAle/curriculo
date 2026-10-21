@@ -1,126 +1,88 @@
-\documentclass[11pt,a4paper]{article}
-\usepackage[brazil]{babel}
+\documentclass[10.5pt,a4paper]{article}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{geometry}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage[top=1.3cm,bottom=1.2cm,left=1.7cm,right=1.7cm]{geometry}
 \usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage{paracol}
 \usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
 
-\geometry{margin=1.6cm}
+\definecolor{accent}{HTML}{1F3A5F}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.04}
 
-\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{\MakeUppercase}[\vspace{-5pt}\textcolor{accent}{\rule{\linewidth}{0.6pt}}]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+
+\setlist[itemize]{leftmargin=1.1em,itemsep=1.5pt,topsep=2pt,parsep=0pt}
+
+\newcommand{\entry}[4]{%
+  \textbf{#1} \hfill #4\\
+  \textit{#2}\ifx&#3&\else\ --- #3\fi\par\vspace{1pt}}
 
 \begin{document}
-\pagestyle{empty}
 
 \begin{center}
-    {\LARGE \textbf{Alexandre Oliveira}}\\[4pt]
-    \textbf{Engenheiro de Software}\\[10pt]
+  {\Huge\bfseries\color{accent} Alexandre Silva Oliveira}\\[3pt]
+  {\large Software Engineer}\\[4pt]
+  Anápolis -- GO, Brazil \ $|$ \ (62) 9 99829-6096 \ $|$ \ \href{mailto:olidev.alexandre@gmail.com}{olidev.alexandre@gmail.com}\\[1pt]
+  \href{https://www.linkedin.com/in/oliveirale}{linkedin.com/in/oliveirale} \ $|$
+  \href{https://github.com/helloAle}{github.com/helloAle} \ $|$
+  \href{https://helloale.github.io/portfolio}{helloale.github.io/portfolio}
 \end{center}
 
-% Define as larguras das colunas
-\columnratio{0.41}
-\begin{paracol}{2}
+\section{Professional Summary}
+Software Engineer graduated from UniEvangélica, with experience in \textit{full-stack} development (Node.js, TypeScript, PostgreSQL, and React), process automation, and data organization and analysis. Practical experience in database modeling, \textit{back-end} integration, responsive web interfaces, and standardization of workflows using spreadsheets and digital tools, applying agile methodologies and development best practices.
 
-%==========================================
-\section*{Informações Pessoais}
+\section{Technical Skills}
+\begin{tabular}{@{}p{3.6cm}p{13cm}@{}}
+\textbf{Languages} & JavaScript, TypeScript, Python, C++, C\#\\
+\textbf{Back-end} & Node.js, database integration, route and API development\\
+\textbf{Front-end} & React, HTML5, CSS3, JavaScript, responsive interfaces, UI/UX\\
+\textbf{Databases} & PostgreSQL, MySQL, data modeling\\
+\textbf{Design} & Adobe Photoshop, Illustrator, InDesign\\
+\textbf{Productivity} & Excel, Word, PowerPoint, structured spreadsheets, and data validation\\
+\textbf{Methodologies} & Agile methodologies, project management\\
+\end{tabular}
 
-\begin{itemize}[leftmargin=*]
-    \item \textbf{Telefone:} (62) 9 9988-5142
-    \item \textbf{Localização:} Anápolis - GO
-    \item \textbf{E-mail:} \href{mailto:alexandredetto.ale@gmail.com}{alexandredetto.ale@gmail.com}
-    \item \textbf{LinkedIn:} \href{https://www.linkedin.com/in/oliveirale}{linkedin.com/in/oliveirale}
-    \item \textbf{GitHub:} \href{https://github.com/helloAle}{github.com/helloAle}
+\section{Professional Experience}
+\entry{Administrative Assistance Advisor}{Goianápolis City Hall (Prefeitura Municipal de Goianápolis)}{Goianápolis -- GO, Brazil}{2024 -- Present}
+\begin{itemize}
+  \item Automated and optimized internal processes using structured spreadsheets, data validation, and standardized administrative routines.
+  \item Responsible for digital travel control and for supporting decision-making.
+  \item Tracked requests and internal processes end to end, ensuring organization, clarity, and traceability of information.
 \end{itemize}
 
-%==========================================
-\section*{Idiomas}
-
-\begin{itemize}[leftmargin=*]
-    \item Português — Nativo
-    \item Inglês — B2
-    \item Espanhol — B2
-    \item Italiano — A1
-    \item Francês — A1
+\vspace{3pt}
+\entry{Back-end Developer Intern}{Fasters Soluções em Tecnologias}{}{2022}
+\begin{itemize}
+  \item Modeled and managed data with PostgreSQL, including creating and maintaining database structures.
+  \item Integrated the database with a TypeScript \textit{back-end}, ensuring efficient communication aligned with the application's needs.
 \end{itemize}
 
-%==========================================
-\section*{Formação Acadêmica}
-
-\textbf{Engenharia de Software}  
-UniEvangélica \hfill 2021--2025
-
-%==========================================
-\section*{Competências}
-
-\textbf{Linguagens e Back-end}
-\begin{itemize}[leftmargin=*]
-    \item JavaScript, TypeScript, Node.js
+\vspace{3pt}
+\entry{Front-end Developer Trainee}{Fábrica de Tecnologias Turing}{Anápolis -- GO, Brazil}{2021 -- 2022}
+\begin{itemize}
+  \item Contributed features and improvements to Unisecurity, the internal system of the university's software factory.
+  \item Built responsive web interfaces following \textit{front-end} best practices.
+  \item Optimized usability and performance, focusing on user experience and technical efficiency.
 \end{itemize}
 
-\textbf{Front-end}
-\begin{itemize}[leftmargin=*]
-    \item HTML5, CSS3, JavaScript, React
+\section{Projects}
+\begin{itemize}
+  \item \textbf{Woodworking company institutional website} (landing page, design system, and UI design) --- \href{https://helloale.github.io/arqmoveisplanejados/}{helloale.github.io/arqmoveisplanejados}. HTML, CSS, JavaScript, and React, focused on responsiveness, usability, and reusable components.
+  \item \textbf{Agricultural company website} --- developed and integrated the database, creating routes, connections, and structures for efficient data storage and querying.
+  \item \textbf{Landing pages and web interfaces} --- modern pages optimized for different devices. Portfolio: \href{https://helloale.github.io/portfolio}{helloale.github.io/portfolio}.
 \end{itemize}
 
-\textbf{Banco de Dados}
-\begin{itemize}[leftmargin=*]
-    \item PostgreSQL
-\end{itemize}
+\section{Education}
+\entry{Bachelor's Degree in Software Engineering}{UniEvangélica}{Anápolis -- GO, Brazil}{2021 -- 2025}
 
-\textbf{Ferramentas de Design}
-\begin{itemize}[leftmargin=*]
-    \item Adobe Photoshop, Illustrator, InDesign
-\end{itemize}
-
-\textbf{Produtividade e Escritório}
-\begin{itemize}[leftmargin=*]
-    \item Pacote Office (Excel, Word, PowerPoint)
-\end{itemize}
-
-\switchcolumn
-
-%==========================================
-\section*{Perfil Profissional}
-
-Engenheiro de Software com experiência em gerenciamento de projetos, desenvolvimento front-end e back-end e rotinas administrativas ligadas à organização e análise de dados.
-
-Atuo na automação e padronização de processos internos com planilhas e ferramentas digitais, aplicando metodologias ágeis e boas práticas de desenvolvimento.
-
-%==========================================
-\section*{Experiência Profissional}
-
-\textbf{Assessor de Assistência Administrativa}\\
-Prefeitura Municipal de Goianápolis \hfill 2024 -- Atual
-\begin{itemize}[leftmargin=*]
-    \item Automação de rotinas com planilhas (fórmulas, validação de dados, estruturação de informação).
-    \item Controle digital de viagens e apoio administrativo para tomada de decisões.
-    \item Emissão e acompanhamento de solicitações e processos internos, garantindo rastreabilidade das informações.
-\end{itemize}
-
-\textbf{Desenvolvedor Estagiário Back-end}\\
-Fasters Soluções em Tecnologias \hfill 2022
-\begin{itemize}[leftmargin=*]
-    \item Aplicação de bancos de dados com PostgreSQL.
-    \item Integração do banco de dados com back-end usando TypeScript.
-\end{itemize}
-
-\textbf{Desenvolvedor Trainee Front-end}\\
-Fabrica de Tecnologias Turing \hfill 2021--2022
-\begin{itemize}[leftmargin=*]
-    \item Colaboração no desenvolvimento do Unisecurity, sistema interno da fábrica-escola da universidade.
-    \item Desenvolvimento de projetos web com foco em interfaces responsivas.
-    \item Otimização da usabilidade e do desempenho das aplicações.
-\end{itemize}
-
-%==========================================
-\section*{Projetos}
-
-Desenvolvimento de landing pages e interfaces web focadas em responsividade, usabilidade e boas práticas de UI/UX. Criação de páginas modernas com HTML, CSS, JavaScript e React, aplicando design limpo, componentes reutilizáveis e otimização para diferentes dispositivos.\\ \\
-Portfólio:  
-\href{https://helloale.github.io/portfolio}{helloale.github.io/portfolio}
-
-\end{paracol}
+\section{Languages}
+Portuguese: Native \ $\bullet$ \ English: B2 (Upper-Intermediate) \ $\bullet$ \ Spanish: B2 (Upper-Intermediate)
 
 \end{document}
